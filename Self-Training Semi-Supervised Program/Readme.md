@@ -1,16 +1,16 @@
 ###Problem Statement: Predict gender for given data which conisits of age, height and weight as attributes.
 
 ####Data
-Ds - set of records given in data-set
-Du - set of unlabeled records given in data-set.
-Dt - set of test records given in data-set.
+Ds - set of records given in data-set.    
+Du - set of unlabeled records given in data-set.  
+Dt - set of test records given in data-set.  
 
 ####Files:  
-ml3_Ds.csv - Ds
-ML_p3.csv -Ds
-MLp.csv -Ds
-test_ml3.csv - Du
-ml3_2.csv - Dt
+ml3_Ds.csv - Ds  
+ML_p3.csv -Ds  
+MLp.csv -Ds  
+test_ml3.csv - Du  
+ml3_2.csv - Dt  
 
 ####Structure:  
 ml3_Ds, ML_p3, MLp have same content but two of the files get updated in one of the code and all files are used so there are 3 differently named same files. 
