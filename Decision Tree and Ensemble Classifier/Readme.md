@@ -10,6 +10,6 @@ It has been tested on mu_tst.csv.
 The decision treee is constructed on basis of maximum information gain or minimum entropy at each level.
 
 ##Ensemble classifier:
-I have made 2 files ensemble1.csv and ensemble2.csv based on random data points from mu_train.csv. It can be made automatically too with program.
+I have made 2 files ensemble1.csv and ensemble2.csv based on random data points from mu_train.csv. It can be created automatically with program.
 First it is trained on ensemble1.csv and checked for ensemble2.csv and then vice versa.
 The accuracy of both is being printed by the program.
