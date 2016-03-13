@@ -1,4 +1,4 @@
-###Problem Statement: Predict gender for given data which conisits of age sex and weight as attributes.
+###Problem Statement: Predict gender for given data which conisits of age, height and weight as attributes.
 
 ####Data
 Ds - set of records given in data-set
