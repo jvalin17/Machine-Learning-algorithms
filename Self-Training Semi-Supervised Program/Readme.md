@@ -15,9 +15,9 @@ ml3_2.csv - Dt
 ####Structure:  
 ml3_Ds, ML_p3, MLp have same content but two of the files get updated in one of the code and all files are used so there are 3 differently named same files. 
 
-Part a:
-Input : 'ML_p3.csv'
-Program Name: MLP3.py
+Part a:  
+Input : 'ML_p3.csv'  
+Program Name: MLP3.py  
 Language: Python 
 
 Self Training Semi Supervised Learning Algorithm  
