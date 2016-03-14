@@ -1,4 +1,4 @@
-###Problem Statement: Predict sex of a person given age,weight and height.
+###Problem Statement: Predict gender of a person given age,weight and height using visualization of regression models .
 
 ####Program Name:  ML_1(Training)
 Linear Regression  
