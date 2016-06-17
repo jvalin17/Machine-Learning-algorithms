@@ -53,12 +53,12 @@ It will make two files that is train.txt and test.txt.
 It will run on train data and test data and predicts the output.  
 
 ##Analysis
-The splitting of data is randomly done using functionrandom.sample() so splitting is unbiased andhence it gives different
+The splitting of data is randomly done using functionrandom.sample() so splitting is unbiased and hence it gives different
 accuracies every time you run the code.  
 
 Prior Probabilities also change due different data points.
 
-The accuracies are similar but not same. In the graph below I have ran the code for same training data split percentage for
+The accuracies are similar but not same. I have ran the code for same training data split percentage for
 3 times each and achieved different accuracies.  
 
 Maximum Accuracy on an average is 82.6% which is achieved when split ratio is 75:25 (train:test).
