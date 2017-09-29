@@ -1,11 +1,11 @@
-#E-Mail Spam Filtering
+# E-Mail Spam Filtering
 The data is taken from UCI Machine Learning Data Repository.The collection of spam e-mails came from their (Hewlett-Packard Labs)
 postmaster and individuals who had filed spam. The collection of non-spam e-mails came from filed work and personal e-mails, 
 and hence the word 'george' and the area code '650' are indicators of non-spam.  These are useful when constructing a personalized
 spam filter.  One would either have to blind such non-spam indicators or get a very wide collection of non-spam to generate a 
 general purpose spam filter.
 
-##Data Attributes and Information
+## Data Attributes and Information
 Number of Instances: 4601 (1813 Spam = 39.4%)
 Number of Attributes: 58 (57 continuous, 1 nominal class label)
 The last column of 'spambase.txt' denotes whether the e-mail is considered as spam (1) or not (0), i.e. unsolicited commercial 
@@ -36,7 +36,7 @@ Class Distribution:
 Spam 1813 (39.4%)
 Non-Spam 2788 (60.6%)
 
-##Method
+## Method
 
 The attributes are continuous so I have considered Gaussian Naïve Bayes for each of the attribute in the data i.e.
 P (A_i|C_j) = 1/√(2πσ^2 )*e^(〖(A_i-μ_(y))〗^2/(2*σ_ij^2 )) where σ  is variance and μ is mean A_i is attribute and C_j is Class 
@@ -46,13 +46,13 @@ So I am taking mean and variance of each of the attribute with a particular clas
 probability will be classified. 
 I have applied concept of split ratio as there is no test data. The split percentage for training data has to be provided by the user.
 
-##Flow
+## Flow
 Run python program.
 It will ask for input from user for split percentage and give output.  
 It will make two files that is train.txt and test.txt.  
 It will run on train data and test data and predicts the output.  
 
-##Analysis
+## Analysis
 The splitting of data is randomly done using functionrandom.sample() so splitting is unbiased and hence it gives different
 accuracies every time you run the code.  
 
