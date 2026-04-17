@@ -15,6 +15,7 @@ Usage:
 """
 
 from src.classifier import DecisionTree
+from src.ensemble import EnsembleClassifier
 from src.utils.data import load_csv
 
-__all__ = ["DecisionTree", "load_csv"]
+__all__ = ["DecisionTree", "EnsembleClassifier", "load_csv"]
