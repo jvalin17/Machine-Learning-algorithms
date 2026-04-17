@@ -1,15 +1,58 @@
-## Problem Statement 
-Predict whether a mushroom is edible or poisonous from a set of discrete attributes, namely cap-shape (6 possible values), cap-surface (4 possible values), cap-color (10 possible values),bruises (2 possible values), and odor (9 possible values). Data is given in the files as a comma separated list fe; x; s; y; t; ag where the first entry is the class (e or p), the second is the cap-shape (b, c, x, f, k, or s), the third is the cap-surface (f, g, y, or s), the fourth entry is the cap-color (n, b, c, g, r, p, u, e, w, y, t, or f), the fifth entry is whether it bruises (t, or f), and the last entry is the odor (a, l, c, y, f, m, n, p, or s).
+## Mushroom Classification — Decision Tree & Ensemble
+
+Predict whether a mushroom is **edible** or **poisonous** from discrete attributes using an ID3 decision tree and an ensemble classifier. Built from scratch with zero external libraries.
+
+## Features
+
+| Column | Attribute   | Possible Values |
+|--------|-------------|-----------------|
+| 1      | class       | edible (e), poisonous (p) |
+| 2      | cap_shape   | bell, conical, convex, flat, knobbed, sunken |
+| 3      | cap_surface | fibrous, grooves, scaly, smooth |
+| 4      | cap_color   | brown, buff, cinnamon, gray, green, pink, purple, red, white, yellow, tan, fawn |
+| 5      | bruises     | yes, no |
+| 6      | odor        | almond, anise, creosote, fishy, foul, musty, none, pungent, spicy |
 
 ## Data
-There are two files. Training data is mu_train.csv in which last column has been eliminated.The column with odor has also been eliminated as it is a strong predictor of the resulatnt class.
 
-It has been tested on mu_tst.csv.
+Training and test data are in `resources/`:
 
-## Decision Tree
-The decision treee is constructed on basis of maximum information gain or minimum entropy at each level.
+- `mushroom_train.csv` — 100 labeled samples for training
+- `mushroom_test.csv` — 50 labeled samples for testing
+- `ensemble_fold_1.csv`, `ensemble_fold_2.csv` — random splits for cross-validation
 
-## Ensemble classifier:
-I have made 2 files ensemble1.csv and ensemble2.csv based on random data points from mu_train.csv. It can be created automatically with program.
-First it is trained on ensemble1.csv and checked for ensemble2.csv and then vice versa.
-The accuracy of both is being printed by the program.
+## Usage
+
+```bash
+python3 main.py
+```
+
+```bash
+python3 -m tests.run_all
+```
+
+## Project Structure
+
+```
+src/
+  engine/
+    math_core.py       — log2 (pure Python, double precision)
+    information.py     — entropy, information gain, feature selection
+  utils/
+    data.py            — CSV loading, counting, partitioning
+    tree_ops.py        — tree node, building, prediction, pruning, display
+  metrics/
+    evaluation.py      — accuracy, confusion matrix, precision/recall/F1
+  classifier.py        — DecisionTree (public API)
+  ensemble.py          — EnsembleClassifier (majority-vote, k-fold CV)
+
+tests/                 — 37 unit tests across 7 test files
+resources/             — CSV data files
+main.py                — entry point, runs both classifiers
+```
+
+## Algorithms
+
+**Decision Tree (ID3):** Splits on the feature with highest information gain (lowest weighted entropy) at each node. Supports configurable max depth, minimum samples per split, and reduced-error post-pruning.
+
+**Ensemble Classifier:** Trains one decision tree per fold using k-fold cross-validation. Classifies new samples via majority vote across all trees.
