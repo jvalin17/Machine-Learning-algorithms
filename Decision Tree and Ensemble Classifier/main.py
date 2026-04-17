@@ -46,8 +46,8 @@ def readable_tree(node, headers, indent=""):
 
 
 def main():
-    _, train_rows = load_csv("mushroom_train.csv")
-    _, test_rows = load_csv("mushroom_test.csv")
+    _, train_rows = load_csv("resources/mushroom_train.csv")
+    _, test_rows = load_csv("resources/mushroom_test.csv")
 
     tree = DecisionTree(max_depth=10, min_samples=2)
     tree.fit(train_rows, headers=FEATURE_NAMES, label_col=0)

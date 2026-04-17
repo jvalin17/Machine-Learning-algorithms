@@ -12,11 +12,11 @@ from collections import Counter
 from random import randint
 
 a2 = []
-a2.append('ensemble2.csv')
-a2.append('ensemble1.csv')
+a2.append('resources/ensemble2.csv')
+a2.append('resources/ensemble1.csv')
 a1 =[]
-a1.append('ensemble1.csv')
-a1.append('ensemble2.csv')
+a1.append('resources/ensemble1.csv')
+a1.append('resources/ensemble2.csv')
 for zi in range(len(a1)):
     lock = a1.pop(0)
     h = np.recfromcsv(lock,delimiter=',')
