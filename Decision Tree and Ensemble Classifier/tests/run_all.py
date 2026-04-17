@@ -13,10 +13,11 @@ from tests.test_information import run_all as run_info
 from tests.test_tree_ops import run_all as run_tree
 from tests.test_metrics import run_all as run_metrics
 from tests.test_classifier import run_all as run_classifier
+from tests.test_ensemble import run_all as run_ensemble
 
 
 if __name__ == "__main__":
-    suites = [run_math, run_data, run_info, run_tree, run_metrics, run_classifier]
+    suites = [run_math, run_data, run_info, run_tree, run_metrics, run_classifier, run_ensemble]
     failed = False
 
     for suite in suites:
